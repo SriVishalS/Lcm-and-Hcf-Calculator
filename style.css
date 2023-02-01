@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=KoHo&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "KoHo", sans-serif;
+  text-align: center;
+}
+body {
+  background-color: #f1faee;
+}
+body,
+.container,
+.box,
+.property,
+form {
+  display: flex;
+  align-items: center;
+}
+
+.box,
+form,
+body {
+  justify-content: center;
+  flex-direction: column;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: none;
+}
+
+.container {
+  width: 100vw;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+button,
+input[type="submit"] {
+  cursor: pointer;
+}
+
+button {
+  width: 60vw;
+  height: 10vh;
+  margin-top: 2vh;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background-color: #e63946;
+  color: #f5ebe0;
+  font-size: 1rem;
+}
+
+.box {
+  border-radius: 10px;
+  width: 60vw;
+  /* background-color: #a8dadc; */
+  color: #fff;
+  margin-top: 1px;
+}
+form {
+  margin-top: 2vh;
+}
+
+input {
+  height: 6vh;
+  outline: none;
+  border: none;
+  background-color: #457b9d;
+  color: white !important;
+}
+
+input[type="number"] {
+  width: 20vw;
+  margin-left: 1px;
+  color: white;
+}
+
+input[type="submit"] {
+  background-color: #1d3557;
+  padding: 0vh 1vw;
+  margin-top: 1vh;
+  width: 40vw;
+}
+
+.property {
+  width: 60vw;
+  justify-content: space-evenly;
+  margin: 3vh;
+}
+
+.property > div {
+  width: 16vw;
+  background: #1e1e1e;
+  box-shadow: inset 5px 5px 10px #0c0c0c, inset -5px -5px 10px #303030;
+  padding: 1vh 1vw;
+  opacity: 0.5;
+}
+
+.result {
+  margin-top: 2vh;
+  color: black;
+}
+.loaderWrapper{
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      z-index: 10000;
+      background-color: white;
+}
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  background: linear-gradient(0deg, rgba(255, 61, 0, 0.2) 33%, #ff3d00 100%);
+  box-sizing: border-box;
+  animation: rotation 0.5s linear infinite;
+}
+.loader::after {
+  content: '';  
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: white;
+}
+@keyframes rotation {
+  0% { transform: rotate(0deg) }
+  100% { transform: rotate(360deg)}
+} 
+@media all and (max-width: 500px) {
+  button,
+  .box {
+    width: 90vw;
+  }
+
+  input[type="number"] {
+    width: 40vw;
+  }
+
+  input[type="submit"] {
+    width: 80vw;
+  }
+
+  .property > div {
+    width: 32vw;
+  }
+}
