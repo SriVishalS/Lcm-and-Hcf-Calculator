@@ -1,0 +1,15 @@
+{
+      "short_name": "HCF and LCM Calculator",
+      "name": "HCF and LCM Calculator App",
+      "icons": [
+            {
+                  "src": "weblogo.png",
+                  "type": "image/png",
+                  "sizes": "192x192"
+            }
+      ],
+      "start_url": "index.html",
+      "display": "fullscreen",
+      "background_color": "#f1faee",
+      "theme_color": "#f1faee"
+}
